@@ -20,7 +20,6 @@ html{
 }
 #header{
     align-items: baseline;
-    background: transparent;
     /* border-bottom: 1px solid gray; */
 }
 #header button{
@@ -155,7 +154,7 @@ img{
 
 #about{
     position: relative;
-    height: 100vh;
+    height: 100%;
     z-index: 1002;
     background-color: #f2fdf8;
 }
@@ -178,6 +177,20 @@ img{
 #about div p{
     font-size: 1.3rem;
 }
+
+/*
+  ========================================
+    Mise en forme de la section partner
+  ========================================
+*/
+
+#partners{
+    margin-bottom: 25px;
+    z-index: 1002;
+    background-color: white;
+    width: 100%;
+}
+
 #partners #logo_perso{
     font-size: 3.0rem;
     font-weight: 900;
@@ -190,12 +203,12 @@ img{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    align-items: center;
+    /* align-items: center; */
     /* width: 60%; */
     margin-top: 25px;
 }
 #partners #logo-section a #logo_msf{
-    position: relative;
+    /* position: relative; */
     width: auto;
     height: auto;
 }
@@ -211,4 +224,38 @@ img{
     #partners #logo-section a #logo_msf{
         margin-top: 15px;
     }
+}
+
+/*===============================================
+          MISE EN FORME DU FOOTER 
+  ===============================================
+*/
+
+footer #myfooter{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 10px;
+}
+footer #myfooter #svg{
+    width: 25px;
+    height: auto;
+}
+footer #myfooter li{
+    margin: 6px;
+}
+footer{
+    position: fixed;
+}
+#footer{
+    position: relative;
+}
+#myfooter li a:hover{
+    background-color: green;
+    /* margin: 3px; */
+    /* padding: 3px; */
+    color: white;
+    transition: background-color 1s;
 }

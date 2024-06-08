@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "thekalinga.bootstrap4-vscode",
-        "zignd.html-css-class-completion"
+        "zignd.html-css-class-completion",
+        "ms-edgedevtools.vscode-edge-devtools"
     ]
 }

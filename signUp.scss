@@ -1,0 +1,186 @@
+:root{
+    --step-number: 5;
+    --container-width: 480px;
+    --font-color: #faf6ff;
+    --dark-color: #3c3f42;
+    --error-color: green; //#f51a63
+
+    @media screen and (max-width: 660px){
+        --container-width: 360px;
+    }
+
+    @media screen and (max-width: 490px){
+        --container-width: 96%;
+    }
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65)),
+        url('../asset/img/bible_thompson.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
+#form{
+    width: var(--container-width);
+    // height: max-content;
+    background-color: transparentize($color: #232f3a, $amount: 0.35);
+    margin-bottom: 48px;
+    padding: 48px;
+
+    .header{
+        font-size: 40px;
+        font-weight: 600;
+        margin-block-end: 32px;
+        color: var(--font-color);
+        text-align: center;
+    }
+}
+button{
+   color: var(--font-color) !important;
+   background-color: var(--error-color) !important;
+   border: 1px solid darken($color: green, $amount: 10) !important;
+   
+   &:hover{
+    color: var(--error-color) !important;
+    background-color: var(--font-color) !important;
+   }
+}
+.cc-progress-bar{
+    display: flex;
+    margin: 36px 0;
+    user-select: none;
+    
+    .step {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        justify-content: space-evenly;
+        &:last-child{
+            .bullet::before,
+            .bullet::after{
+                display: none;
+            }
+        }
+
+        p{
+            font-weight: 500;
+            font-size: 18px;
+            margin-block-end: 8px;
+
+            &.active{
+                color: var(--error-color);
+            }
+
+            @media screen and (max-width: 660px) {
+                display: none;
+            }
+        }
+
+        .bullet{
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--font-color);
+            border-radius: 50%;
+
+            &.active {
+                color: var(--font-color);
+                background-color: var(--error-color);
+                border-color: var(--error-color);
+            }
+
+            &::before, 
+            &::after{
+                position: absolute;
+                content: '';
+                width: 44px;
+                height: 4px;
+                background: var(--font-color);
+                right: -52px;
+                margin: 9.3px;
+                display: none;
+
+
+                @media screen and (max-width: 660px) {
+                    display: none;
+                }
+            }
+
+            &.active::after {
+                background: var(--error-color);
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 0.3s linear forwards;
+            }
+
+            span {
+                font-size: 16px;
+            }
+
+        }
+    }
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.form-container{
+    width: 100%;
+    overflow: hidden;
+
+    form{
+        display: flex;
+        width: calc(100% * var(--step-number));
+        transition: transform 0.15s ease-in-out;
+        & > * {
+            color: var(--font-color);
+        }
+        .page{
+            width: calc(100% / var(--step-number));
+
+            h5{
+                text-align: start;
+                font-size: 28px;
+                margin-block-end: 32px;
+                
+                @media screen and (max-width: 660px) {
+                    font-size: 24px;
+                    margin-block-end: 8px;
+                }
+            }
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input{
+            border-radius: 0;
+            &.invalid{
+              border-color: var(--error-color);  
+            }
+        }
+        select{
+            border-radius: 0;
+            option:hover{
+                background-color: green;
+                color: var(--font-color);
+            }
+        }
+    }
+
+    #myalert{
+        display: block;
+    }
+}

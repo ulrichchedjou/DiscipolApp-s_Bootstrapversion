@@ -1,0 +1,104 @@
+:root{
+    --step-number: 5;
+    --container-width: 480px;
+    --font-color: #faf6ff;
+    --dark-color: #3c3f42;
+    --error-color: green; //#f51a63
+
+    @media screen and (max-width: 660px){
+        --container-width: 360px;
+    }
+
+    @media screen and (max-width: 490px){
+        --container-width: 96%;
+    }
+}
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65)),
+        url('./asset/img/cup_coffee_message.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
+#login-form {
+    width: var(--container-width);
+    background-color: transparentize($color: #232f3a, $amount: 0.35);
+    padding: 48px;
+
+    .header{
+        font-size: 40px;
+        font-weight: 600;
+        margin-block-end: 32px;
+        color: var(--font-color);
+        text-align: center;
+    }
+
+
+    .form-container{
+        width: 100%;
+        overflow: hidden;
+
+        form{
+            display: flex;
+            width: 100%;
+            color: var(--font-color);
+
+            .page{
+                width: 100%;
+
+                h5{
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-style: italic;
+                    color: var(--font-color);
+                    text-align: center;
+                    margin-block-end: 32px;
+                    
+                    @media screen and (max-width: 660px) {
+                        font-size: 24px;
+                        margin-block-end: 8px;
+                    }
+
+                }
+
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                label {
+                    width: auto;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                input{
+                    border-radius: 0;
+                    padding: 5px;
+                    font-size: 25px;
+                    &.invalid{
+                        border-color: var(--error-color);  
+                    }
+                }
+            }
+        }
+        button{
+            color: var(--font-color) !important;
+            background-color: var(--error-color) !important;
+            border: 1px solid darken($color: green, $amount: 10) !important;
+            font-size: 25px;
+    
+            &:hover{
+                color: var(--error-color) !important;
+                background-color: var(--font-color) !important;
+            }
+        }
+
+    }
+
+}

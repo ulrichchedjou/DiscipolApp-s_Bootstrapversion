@@ -1,3 +1,6 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -7,6 +10,7 @@
 
 html{
     overflow-x: hidden;
+    height: auto;
     scroll-behavior: smooth;
     font-size: 15px;
 }
@@ -15,11 +19,17 @@ html{
    =================================================================================
 */
 #supheader{
-    box-shadow: 10px 10px 5px lightgreen;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px  20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f2f2f2;
     /* z-index: 1000; */
 }
+.main{
+    height: 100vh;
+}
+
 #header{
     align-items: baseline;
+    background-color: #f2f2f2;
     /* border-bottom: 1px solid gray; */
 }
 #header button{
@@ -61,14 +71,37 @@ html{
     font-size: 1.2rem;
     padding-left: 2px;
     padding-right: 2px;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 2px;
     color: green;
     
 }
 #header a h3{
-    font-size: 1.8rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem; /*2.5rem*/
     font-weight: 900;
+    letter-spacing: 2px;
+}
+/* ================================
+        responsive de l'entête
+   ================================
+*/
+@media screen and (max-width: 550px){
+        #supheader > #header > a > h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        #mynavbar{
+            padding: 2px;
+            margin: 2px;
+        }
+        #mynavbar li a {
+            font-size: 1rem;
+            padding: 0;
+        }
+        #mynavbar li {
+            margin: 0;
+        }
 }
 
 /* ==============================================================
@@ -77,31 +110,35 @@ html{
  */
 
 .main-content{
-    height: 100vh;
+    height: auto;
     background: no-repeat;
     margin-bottom: 100px;
 }
+
 .caption .caption-title{
-    font-weight: bolder;
-    /* font-size: 1.5rem; */
-    padding: 10px;
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+    padding: 8px;
+    /* justify-content: center;
+    align-items: center; */
 }
-.caption h1{
-    font-weight: bolder;
-    letter-spacing: 3px;
-    
-}
-.caption h3{
+
+.caption .caption-content{
+    font-family: "Roboto", sans-serif;
+    font-size: 70px;
+    color: #f2f2f2;
     text-align: center;
-    margin-top: 20px;
+    /* text-align: center; */
+    margin-top: 5px;
     font-weight: bold;
     letter-spacing: 2px;
-    line-height: 1.5;
-    width: 65%;
+    line-height: 1.45;
+    width: 100%;
 }
 .caption li{
     list-style: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-top: 20px;
     z-index: 1002;
@@ -113,11 +150,11 @@ html{
 .caption li a{
     text-decoration: none;
     color: white;
-    z-index: 1002;
+    /* z-index: 1002; */
 }
 .caption span{
     color: green;
-    font-weight: 900;
+    /* font-weight: 900; */
 }
 .caption{
     color: white;
@@ -125,6 +162,7 @@ html{
     width: 100%;
     height: 100vh;
     z-index: 1002;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,6 +184,29 @@ img{
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1002;
 }
+/*  ================================================
+                Le responsive du Menu principal
+    ================================================
+ */
+ @media screen and (max-width: 300px){
+    
+    #main-caroussel .caption h3 {
+        justify-content: center;
+        font-size: 24px;
+        letter-spacing: 0;
+        font-weight: 400;
+        /* margin-top: 20px; */
+    }
+    #main-caroussel .caption h5{
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+    .caption{
+        width: auto;
+        padding: 0;
+        margin: 30px;
+    }
+}
 
 /*=========================================================================
                 LA MISE EN FORME DE LA SECTION "About Us"
@@ -155,7 +216,7 @@ img{
 #about{
     position: relative;
     height: 100%;
-    z-index: 1002;
+    /* z-index: 1002; */
     background-color: #f2fdf8;
 }
 #about h1{
@@ -186,7 +247,6 @@ img{
 
 #partners{
     margin-bottom: 25px;
-    z-index: 1002;
     background-color: white;
     width: 100%;
 }
@@ -202,13 +262,11 @@ img{
 #partners #logo-section{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    /* width: 60%; */
-    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
 }
+
 #partners #logo-section a #logo_msf{
-    /* position: relative; */
     width: auto;
     height: auto;
 }
@@ -223,6 +281,7 @@ img{
     }
     #partners #logo-section a #logo_msf{
         margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
 
@@ -230,25 +289,27 @@ img{
           MISE EN FORME DU FOOTER 
   ===============================================
 */
-
+footer{
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px  20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 150px;
+}
 footer #myfooter{
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    justify-content: baseline;
     justify-content: space-between;
     padding: 5px;
-    margin: 10px;
 }
-footer #myfooter #svg{
+#footer #myfooter #svg{
     width: 25px;
     height: auto;
 }
 footer #myfooter li{
     margin: 6px;
 }
-footer{
-    position: fixed;
-}
+
 #footer{
     position: relative;
 }
@@ -258,4 +319,61 @@ footer{
     /* padding: 3px; */
     color: white;
     transition: background-color 1s;
+}
+#svg-up{
+    width: 25px;
+    height: auto;
+    border-top: 2px solid green;
+    padding: 2px;
+    background-color: green;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px  20px 0 rgba(0, 0, 0, 0.19);
+    color: whitesmoke;
+}
+#footer a h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem; /*2.5rem*/
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+#footer a h3 span{
+    color: green;
+}
+#footer a{
+    text-decoration: none;
+}
+/* =================================================
+                Le resposive du footer 
+   =================================================
+*/
+@media screen and (max-width: 550px){
+        footer > #supheader > #footer > a > h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        footer #myfooter{
+            padding: 2px;
+            margin: 2px;
+        }
+        footer #myfooter li a {
+            font-size: 1rem;
+            padding: 0;
+        }
+        footer #footer #myfooter li {
+            margin: 5px;
+        }
+        /* #supheader > #header > a > h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        #mynavbar{
+            padding: 2px;
+            margin: 2px;
+        }
+        #mynavbar li a {
+            font-size: 1rem;
+            padding: 0;
+        }
+        #mynavbar li {
+            margin: 0;
+        } */
 }

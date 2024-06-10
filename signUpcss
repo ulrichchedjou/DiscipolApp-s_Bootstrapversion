@@ -121,8 +121,10 @@ button {
     .form-container form label {
       font-weight: 600; }
     .form-container form input {
-      border-radius: 0; }
-      .form-container form input.invalid {
+      border-radius: 6px; }
+      .form-container form input:focus {
+        border: 4px solid var(--error-color); }
+      .form-container form input:invalid {
         border-color: var(--error-color); }
     .form-container form select {
       border-radius: 0; }

@@ -29,7 +29,7 @@ body {
   #login-form .header {
     font-size: 40px;
     font-weight: 600;
-    margin-block-end: 42px;
+    margin-block-end: 32px;
     color: var(--font-color);
     text-align: center; }
   #login-form .form-container {
@@ -42,16 +42,16 @@ body {
       #login-form .form-container form .page {
         width: 100%; }
         #login-form .form-container form .page h5 {
-          font-size: 20px;
+          font-size: 25px;
           font-weight: 600;
           font-style: italic;
           color: var(--font-color);
           text-align: center;
-          margin-block-end: 32px; }
+          margin-block-end: 18px; }
           @media screen and (max-width: 660px) {
             #login-form .form-container form .page h5 {
-              font-size: 24px;
-              margin-block-end: 8px; } }
+              font-size: 20px;
+              margin-block-end: 32px; } }
       #login-form .form-container form div {
         display: flex;
         flex-direction: column; }
@@ -60,11 +60,13 @@ body {
           font-size: 20px;
           font-weight: 600; }
         #login-form .form-container form div input {
-          border-radius: 0;
-          padding: 5px;
-          font-size: 25px; }
-          #login-form .form-container form div input.invalid {
-            border-color: var(--error-color); }
+          border-radius: 6px;
+          padding: 3px;
+          font-size: 25px;
+          line-height: 10px;
+          outline: none; }
+          #login-form .form-container form div input:focus {
+            border: 4px solid var(--error-color); }
     #login-form .form-container button {
       color: var(--font-color) !important;
       background-color: var(--error-color) !important;

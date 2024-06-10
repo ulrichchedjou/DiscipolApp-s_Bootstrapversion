@@ -54,18 +54,21 @@ html{
 }
 #mynavbar li:hover{
     background-color: green;
+    border-radius: 6px;
     /* margin: 3px; */
     /* padding: 3px; */
     color: white;
     transition: background-color 1s;
 }
 #mynavbar li a:hover{
+    background-color: green;
     color: white;
 }
 
-#mynavbar li:hover{
+/* #mynavbar li:hover{
     border-radius: 6px;
-}
+    color: white;
+} */
 #mynavbar li a, #header a{
     text-decoration: none;
     font-size: 1.2rem;

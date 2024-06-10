@@ -166,8 +166,11 @@ button{
         }
 
         input{
-            border-radius: 0;
-            &.invalid{
+            border-radius: 6px;
+            &:focus{
+                border: 4px solid var(--error-color);
+            }
+            &:invalid{
               border-color: var(--error-color);  
             }
         }

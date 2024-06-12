@@ -61,7 +61,6 @@ html{
     transition: background-color 1s;
 }
 #mynavbar li a:hover{
-    background-color: green;
     color: white;
 }
 
@@ -121,7 +120,6 @@ html{
 .caption .caption-title{
     font-size: 2.8rem;
     font-weight: 500;
-    letter-spacing: 0px;
     padding: 8px;
     /* justify-content: center;
     align-items: center; */
@@ -129,31 +127,39 @@ html{
 
 .caption .caption-content{
     font-family: "Roboto", sans-serif;
-    font-size: 70px;
+    font-size: 40px;
     color: #f2f2f2;
     text-align: center;
-    /* text-align: center; */
-    margin-top: 5px;
+    margin: 10px;
     font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 1.45;
-    width: 100%;
+    letter-spacing: 1px;
+    line-height: 1.50;
+    width: auto;
 }
+
 .caption li{
     list-style: none;
+    text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 20px;
+    margin: 30px;
     z-index: 1002;
     background-color: green;
     padding: 10px 15px 10px 15px;
     border: none;
-    border-radius: 10%;   
+    /* border-radius: 10%;    */
+}
+.caption li:hover{
+    background-color: #f2f2f2;
+    border-radius: 5%;
 }
 .caption li a{
     text-decoration: none;
     color: white;
     /* z-index: 1002; */
+}
+.caption li a:hover{
+    color: green;
 }
 .caption span{
     color: green;
@@ -162,15 +168,15 @@ html{
 .caption{
     color: white;
     position: absolute;
-    width: 100%;
-    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
     z-index: 1002;
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 img{
@@ -191,8 +197,14 @@ img{
                 Le responsive du Menu principal
     ================================================
  */
+
+ /* ===========================
+    LA LARGEUR DE L'ECRAN 
+    ===========================    
+*/
+
  @media screen and (max-width: 300px){
-    
+
     #main-caroussel .caption h3 {
         justify-content: center;
         font-size: 24px;
@@ -208,6 +220,50 @@ img{
         width: auto;
         padding: 0;
         margin: 30px;
+    }
+    .caption .caption-content{
+        font-size: 18px;
+
+    }
+}
+ @media screen and (max-width: 768px){
+    .caption .caption-content{
+        font-size: 25px;
+        letter-spacing: 2px;
+
+    }
+    .main-caroussel .caption{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 800px) {
+    .caption .caption-content{
+        height: auto;
+        letter-spacing: 2px;
+        font-size: 35px;
+    }
+}
+
+/*  ======================== 
+    LA HAUTEUR DE L'ECRAN 
+    ========================
+*/
+
+@media screen and (max-height: 414px) {
+    .caption .caption-content{
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    .caption{
+        margin: 15px;
+    }
+}
+@media screen and (max-height: 720px) {
+    .caption .caption-content{
+        height: auto;
+        letter-spacing: 2px;
+        font-size: 35px;
     }
 }
 

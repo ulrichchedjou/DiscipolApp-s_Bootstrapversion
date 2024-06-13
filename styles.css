@@ -21,7 +21,6 @@ html{
 #supheader{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px  20px 0 rgba(0, 0, 0, 0.19);
     background-color: #f2f2f2;
-    /* z-index: 1000; */
 }
 .main{
     height: 100vh;
@@ -29,18 +28,15 @@ html{
 
 #header{
     align-items: baseline;
-    background-color: #f2f2f2;
-    /* border-bottom: 1px solid gray; */
+    /* background-color: #f2f2f2; */
 }
-#header button{
-    font-size: 50px;
-}
+
 #header h3 span{
     color: green;
 }
 
 #header h3{
-    padding: 10px;
+    padding: 5px;
 }
 #mynavbar {
     display: flex;
@@ -50,25 +46,16 @@ html{
 }
 #mynavbar li{
     padding: 5px;
-    margin-right: 10px;
+    margin: 5px;
 }
-#mynavbar li:hover{
+#mynavbar a li:hover{
     background-color: green;
     border-radius: 6px;
-    /* margin: 3px; */
-    /* padding: 3px; */
     color: white;
-    transition: background-color 1s;
-}
-#mynavbar li a:hover{
-    color: white;
+    transition: background-color 0.5s;
 }
 
-/* #mynavbar li:hover{
-    border-radius: 6px;
-    color: white;
-} */
-#mynavbar li a, #header a{
+#mynavbar > a > li, #header a{
     text-decoration: none;
     font-size: 1.2rem;
     padding-left: 2px;
@@ -117,6 +104,23 @@ html{
     margin-bottom: 100px;
 }
 
+.caption span{
+    color: green;
+}
+.caption{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .caption .caption-title{
     font-size: 2.8rem;
     font-weight: 500;
@@ -137,8 +141,13 @@ html{
     width: auto;
 }
 
+/*  ==============
+        Mise en forme du bouton "s'inscrire"
+    =================
+ */
 .caption li{
     list-style: none;
+    text-decoration: none;
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
@@ -147,36 +156,17 @@ html{
     background-color: green;
     padding: 10px 15px 10px 15px;
     border: none;
-    /* border-radius: 10%;    */
 }
 .caption li:hover{
     background-color: #f2f2f2;
     border-radius: 5%;
 }
-.caption li a{
+.caption a {
     text-decoration: none;
     color: white;
-    /* z-index: 1002; */
 }
-.caption li a:hover{
+.caption a li:hover{
     color: green;
-}
-.caption span{
-    color: green;
-    /* font-weight: 900; */
-}
-.caption{
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto;
-    z-index: 1002;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 img{
@@ -369,16 +359,6 @@ footer #myfooter li{
     margin: 6px;
 }
 
-#footer{
-    position: relative;
-}
-#myfooter li a:hover{
-    background-color: green;
-    /* margin: 3px; */
-    /* padding: 3px; */
-    color: white;
-    transition: background-color 1s;
-}
 #svg-up{
     width: 25px;
     height: auto;
@@ -420,19 +400,4 @@ footer #myfooter li{
         footer #footer #myfooter li {
             margin: 5px;
         }
-        /* #supheader > #header > a > h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-        #mynavbar{
-            padding: 2px;
-            margin: 2px;
-        }
-        #mynavbar li a {
-            font-size: 1rem;
-            padding: 0;
-        }
-        #mynavbar li {
-            margin: 0;
-        } */
 }

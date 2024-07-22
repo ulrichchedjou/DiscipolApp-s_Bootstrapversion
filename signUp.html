@@ -94,12 +94,12 @@
           <div class="page">
             <h5>Informations</h5>
             <div class="mb-3">
-              <label for="firstname" class="form-label">Prenom</label>
-              <input type="text" class="form-control" id="firstname" required>
+              <label title="insérer votre prenom" for="firstname" class="form-label">Prenom</label>
+              <input type="text" name="firstname" class="form-control" id="firstname" autofocus tabindex="1" required>
             </div>
             <div class="mb-3">
-              <label for="name" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="name" required>
+              <label title="insérer votre nom" for="name" class="form-label">Nom</label>
+              <input type="text" name="name" class="form-control" id="name" tabindex="2" required>
             </div>
             <div class="mb-3">
               <button class="btn w-100 rounded-0 next">Suivant</button>
@@ -110,12 +110,12 @@
           <div class="page">
             <h5>Adresse</h5>
             <div class="mb-3">
-              <label for="livingtown" class="form-label">Ville de residence</label>
-              <input type="text" class="form-control" id="livingtown" required>
+              <label title="insérer votre ville de résidence" for="livingtown" class="form-label">Ville de residence</label>
+              <input type="text" name="livingtown" class="form-control" id="livingtown" tabindex="3" required>
             </div>
             <div class="mb-3">
-              <label for="quarter" class="form-label">Quartier</label>
-              <input type="text" class="form-control" id="quarter" required>
+              <label title="inserer votre quartier de residence" for="quarter" class="form-label">Quartier</label>
+              <input type="text" name="quarter" class="form-control" id="quarter" tabindex="4" required>
             </div>
             <div class="mb-3 d-flex justify-content-center gap-3">
               <button class="btn w-100 rounded-0 prev">Precedent</button>
@@ -127,12 +127,12 @@
           <div class="page">
             <h5>Naissance</h5>
             <div class="mb-3">
-              <label for="hometown" class="form-label">Ville de naissance</label>
-              <input type="text" class="form-control" id="hometown" required>
+              <label title="votre date de naissance" for="birthday" class="form-label">Date de naissance</label>
+              <input type="date" class="form-control" name="birthday" id="birthday" tabindex="5" required>
             </div>
             <div class="mb-3">
-              <label for="birthday" class="form-label">Date de Naissance</label>
-              <input type="date" class="form-control" id="birthday" required>
+              <label title=" quand est ce que vous ête né de nouveau" for="bornagain" class="form-label">Quand est ce que vous êtes né(e) de nouveau</label>
+              <input type="date" class="form-control" name="bornagain" id="bornagain" tabindex="6">
             </div>
             <div class="mb-3 d-flex justify-content-center gap-3">
               <button class="btn w-100 rounded-0 prev">Precedent</button>
@@ -144,8 +144,8 @@
           <div class="page">
             <h5>Civilité</h5>
             <div class="mb-3">
-              <label for="civility" class="form-label">Matrimonial</label>
-              <select title="vous ête sur la selection multiple" name="civility" class="form-select" required>
+              <label title="votre statut matrimonial" for="civility" class="form-label">Matrimonial</label>
+              <select title="vous ête sur la selection multiple" name="civility" class="form-select" tabindex="7" required>
                 <option value="statut" selected>--statut--</option>
                 <option value="Marié(e)">Marié(e)</option>
                 <option value="célibataire">Célibataire</option>
@@ -154,8 +154,8 @@
               </select>
             </div>
             <div class="mb-3">
-              <label for="gender" class="form-label">Genre</label>
-              <select title="Vous êtes sur la selection multiple" name="gender" class="form-select" required>
+              <label title="votre genre; homme ou femme" for="gender" class="form-label">Genre</label>
+              <select title="Vous êtes sur la selection multiple" name="gender" class="form-select" tabindex="8" required >
                 <option value="statut" selected>--genre--</option>
                 <option value="homme">homme</option>
                 <option value="femme">femme</option>
@@ -172,17 +172,17 @@
           <div class="page">
             <h5>Soumission</h5>
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required>
+              <label title="insérer votre email" for="email" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" id="email" tabindex="9" required>
             </div>
             <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" required>
+              <label title="insérer votre mot de passe" for="password" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" id="password" tabindex="10" required>
             </div>
             <!-- Les Bouttons de la page -->
             <div class="mb-3 d-flex justify-content-center gap-3">
-              <button class="btn w-100 rounded-0 prev">Precedent</button>
-              <button type="submit" class="btn w-100 rounded-0 submit">Soumettre</button>
+              <button title="vous êtes sur le boutton preccedent" class="btn w-100 rounded-0 prev">Precedent</button>
+              <button title="cliquer pour soumettre votre formulaire" type="submit" class="btn w-100 rounded-0 submit">Soumettre</button>
             </div>
           </div>
         </form>

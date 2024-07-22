@@ -1,0 +1,7 @@
+# Modèle créé le : Thu Jul 11 16:31:16 WAT 2024 
+Converti (ID_converti_Converti, Nom_de_famille_Converti, Prenom_Converti, Birthday_Converti, Lieu_de_naissance_Converti, Residence_Converti, Etat_progression_Cours) 
+Cours (Intitulé_cours_Cours, Date_emission_Cours, description_Cours, nom_auteur_Cours, A_propos_auteur_Cours) 
+QUIZ (Intitulé_quiz_QUIZ, Date_et_heure_debut_QUIZ, Date_et_heure_de_fin_QUIZ, Note_quiz_QUIZ, Date_&_heure_soumission_QUIZ, Etat_progression_QUIZ) 
+Reponses (numero_question_Reponses, Libellé_question_Reponses, score_Reponses, #Intitulé_quiz_QUIZ) 
+s'inscrire (ID_converti_Converti, Intitulé_cours_Cours, Date_souscription_cours_s'inscrire, Date_d'achèvement_cours_s'inscrire) 
+avoir (Intitulé_cours_Cours, Intitulé_quiz_QUIZ) 

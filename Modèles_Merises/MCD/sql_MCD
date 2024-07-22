@@ -1,0 +1,54 @@
+DROP TABLE IF EXISTS Converti ;
+CREATE TABLE Converti (ID_converti_Converti BIGINT AUTO_INCREMENT NOT NULL,
+Nom_de_famille_Converti VARCHAR2(100),
+Prenom_Converti VARCHAR2(100),
+Birthday_Converti DATE,
+Lieu_de_naissance_Converti VARCHAR2(100),
+Residence_Converti VARCHAR2(100),
+Etat_progression_Cours FLOAT,
+PRIMARY KEY (ID_converti_Converti)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Cours ;
+CREATE TABLE Cours (Intitulé_cours_Cours VARCHAR2(150) AUTO_INCREMENT NOT NULL,
+Date_emission_Cours DATE,
+description_Cours VARCHAR2(500),
+nom_auteur_Cours VARCHAR2(100),
+A_propos_auteur_Cours **NOT FOUND**(150),
+PRIMARY KEY (Intitulé_cours_Cours)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS QUIZ ;
+CREATE TABLE QUIZ (Intitulé_quiz_QUIZ VARCHAR2(100) AUTO_INCREMENT NOT NULL,
+Date_et_heure_debut_QUIZ DATETIME,
+Date_et_heure_de_fin_QUIZ DATETIME,
+Note_quiz_QUIZ INT(2),
+Date_&_heure_soumission_QUIZ DATETIME,
+Etat_progression_QUIZ TEXT,
+PRIMARY KEY (Intitulé_quiz_QUIZ)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Reponses ;
+CREATE TABLE Reponses (numero_question_Reponses INT AUTO_INCREMENT NOT NULL,
+Libellé_question_Reponses VARCHAR2(500),
+score_Reponses FLOAT(3),
+Intitulé_quiz_QUIZ **NOT FOUND**,
+PRIMARY KEY (numero_question_Reponses)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS s'inscrire ;
+CREATE TABLE s'inscrire (ID_converti_Converti **NOT FOUND** AUTO_INCREMENT NOT NULL,
+Intitulé_cours_Cours **NOT FOUND** NOT NULL,
+Date_souscription_cours_s'inscrire DATETIME,
+Date_d'achèvement_cours_s'inscrire DATETIME,
+PRIMARY KEY (ID_converti_Converti,
+ Intitulé_cours_Cours)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS avoir ;
+CREATE TABLE avoir (Intitulé_cours_Cours **NOT FOUND**(150) AUTO_INCREMENT NOT NULL,
+Intitulé_quiz_QUIZ **NOT FOUND**(150) NOT NULL,
+PRIMARY KEY (Intitulé_cours_Cours,
+ Intitulé_quiz_QUIZ)) ENGINE=InnoDB;
+
+ALTER TABLE Reponses ADD CONSTRAINT FK_Reponses_Intitulé_quiz_QUIZ FOREIGN KEY (Intitulé_quiz_QUIZ) REFERENCES QUIZ (Intitulé_quiz_QUIZ);
+
+ALTER TABLE s'inscrire ADD CONSTRAINT FK_s'inscrire_ID_converti_Converti FOREIGN KEY (ID_converti_Converti) REFERENCES Converti (ID_converti_Converti);
+ALTER TABLE s'inscrire ADD CONSTRAINT FK_s'inscrire_Intitulé_cours_Cours FOREIGN KEY (Intitulé_cours_Cours) REFERENCES Cours (Intitulé_cours_Cours);
+ALTER TABLE avoir ADD CONSTRAINT FK_avoir_Intitulé_cours_Cours FOREIGN KEY (Intitulé_cours_Cours) REFERENCES Cours (Intitulé_cours_Cours);
+ALTER TABLE avoir ADD CONSTRAINT FK_avoir_Intitulé_quiz_QUIZ FOREIGN KEY (Intitulé_quiz_QUIZ) REFERENCES QUIZ (Intitulé_quiz_QUIZ);

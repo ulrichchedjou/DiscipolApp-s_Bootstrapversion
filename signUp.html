@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <title>SignUp | DiscipolApp's</title>
     <!-- Required meta tags -->
@@ -95,11 +95,11 @@
             <h5>Informations</h5>
             <div class="mb-3">
               <label for="firstname" class="form-label">Prenom</label>
-              <input type="text" class="form-control" required>
+              <input type="text" class="form-control" id="firstname" required>
             </div>
             <div class="mb-3">
               <label for="name" class="form-label">Nom</label>
-              <input type="text" class="form-control" required>
+              <input type="text" class="form-control" id="name" required>
             </div>
             <div class="mb-3">
               <button class="btn w-100 rounded-0 next">Suivant</button>
@@ -110,12 +110,12 @@
           <div class="page">
             <h5>Adresse</h5>
             <div class="mb-3">
-              <label for="firstname" class="form-label">Ville de residence</label>
-              <input type="text" class="form-control" required>
+              <label for="livingtown" class="form-label">Ville de residence</label>
+              <input type="text" class="form-control" id="livingtown" required>
             </div>
             <div class="mb-3">
-              <label for="name" class="form-label">Quartier</label>
-              <input type="text" class="form-control" required>
+              <label for="quarter" class="form-label">Quartier</label>
+              <input type="text" class="form-control" id="quarter" required>
             </div>
             <div class="mb-3 d-flex justify-content-center gap-3">
               <button class="btn w-100 rounded-0 prev">Precedent</button>
@@ -127,12 +127,12 @@
           <div class="page">
             <h5>Naissance</h5>
             <div class="mb-3">
-              <label for="firstname" class="form-label">Ville de naissance</label>
-              <input type="text" class="form-control" required>
+              <label for="hometown" class="form-label">Ville de naissance</label>
+              <input type="text" class="form-control" id="hometown" required>
             </div>
             <div class="mb-3">
-              <label for="name" class="form-label">Date de Naissance</label>
-              <input type="date" class="form-control" required>
+              <label for="birthday" class="form-label">Date de Naissance</label>
+              <input type="date" class="form-control" id="birthday" required>
             </div>
             <div class="mb-3 d-flex justify-content-center gap-3">
               <button class="btn w-100 rounded-0 prev">Precedent</button>
@@ -145,7 +145,7 @@
             <h5>Civilité</h5>
             <div class="mb-3">
               <label for="civility" class="form-label">Matrimonial</label>
-              <select name="civility" class="form-select" required>
+              <select title="vous ête sur la selection multiple" name="civility" class="form-select" required>
                 <option value="statut" selected>--statut--</option>
                 <option value="Marié(e)">Marié(e)</option>
                 <option value="célibataire">Célibataire</option>
@@ -155,7 +155,7 @@
             </div>
             <div class="mb-3">
               <label for="gender" class="form-label">Genre</label>
-              <select name="gender" class="form-select" required>
+              <select title="Vous êtes sur la selection multiple" name="gender" class="form-select" required>
                 <option value="statut" selected>--genre--</option>
                 <option value="homme">homme</option>
                 <option value="femme">femme</option>
@@ -172,17 +172,17 @@
           <div class="page">
             <h5>Soumission</h5>
             <div class="mb-3">
-              <label for="firstname" class="form-label">Email</label>
-              <input type="email" class="form-control" required>
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
             </div>
             <div class="mb-3">
-              <label for="name" class="form-label">Password</label>
-              <input type="password" class="form-control" required>
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
             </div>
             <!-- Les Bouttons de la page -->
             <div class="mb-3 d-flex justify-content-center gap-3">
               <button class="btn w-100 rounded-0 prev">Precedent</button>
-              <button class="btn w-100 rounded-0 submit">Soumettre</button>
+              <button type="submit" class="btn w-100 rounded-0 submit">Soumettre</button>
             </div>
           </div>
         </form>

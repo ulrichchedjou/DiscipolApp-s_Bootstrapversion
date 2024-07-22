@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="./_custom.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/scss/bootstrap.scss">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
@@ -57,12 +58,12 @@
               <i class="fa fa-quote-right" aria-hidden="true">"</i>
             </h5>
             <div class="mb-3 mb-sm-4 mt-sm-4">
-              <label for="email" class="form-label">Adresse Email</label>
-              <input type="email" name="email" id="email-login" autofocus required >
+              <label title="inserer votre adresse email pour vous connecter" for="email" class="form-label">Email</label>
+              <input type="email" name="email" id="email" autofocus required >
             </div>
             <div class="mb-3 mb-sm-4 mt-sm-4">
-              <label for="password">Mot de passe</label>
-              <input type="password" name="password" id="passwd">
+              <label title="insérer votre mot de passe pour vous connecter" for="password">Mot de passe</label>
+              <input type="password" name="password" id="passwd" required>
             </div>
             <div class="mb-3 mb-sm-4 mt-sm-4 ">
               <button type="submit" class="btn w-100 rounded-0">connexion</button>
